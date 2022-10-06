@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../App.css'
-import Footer from '../partials/footer';
-import Navbar from '../partials/navbar';
 
 class Login extends React.Component{
     render(){
