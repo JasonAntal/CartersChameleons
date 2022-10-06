@@ -1,24 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
 import './App.css';
 import Footer from './partials/footer';
-import Navbar from './partials/navbar';
+import {ParallaxProvider} from 'react-scroll-parallax';
+import {Parallax} from 'react-scroll-parallax';
+import ImageSlider from "./components/ImageSlider";
+import { SliderData } from "./components/SliderData";
+/* 
+import { Link } from 'react-router-dom';
 import Cham1 from './images/Cham1.png';
 import Cham2 from './images/Cham2.png';
 import Cham3 from './images/Cham3.png';
 import Cham4 from './images/Cham4.png';
 import Cham5 from './images/Cham5.png';
-import {ParallaxProvider} from 'react-scroll-parallax';
-import {Parallax} from 'react-scroll-parallax';
-import ShowSlides from './slideshow';
+*/
 
 class Main extends React.Component{
   render(){
     return(
       <div className ="App-header">
-        <Navbar/>
+
         <ParallaxProvider>
         <Parallax translateY={['-100px', '125px']}>
         <section id="hero" className = "webSection">
@@ -31,63 +33,50 @@ class Main extends React.Component{
               reptiles in the world. Bred from wild-caught specimens in Madagascar, our little buddies make
               for friendly, relaxed, and low-maintenance companions. 
             </div>
-            <button className="btn btn-success btn-lg" id = "hero-button">Check out our Chameleons</button>
           </div>
         </section>
         </Parallax>
         </ParallaxProvider> 
 
         <section id="chameleonDisplay" className = "websection container">
-          <h1 className="section-heading">A Wide Variety of Species</h1>
-          <span className="section-text">Nearly a dozen breeds to choose from, each with their own unique colors and patterns!</span>
+          <h1 className="section-heading">Meet Your New Friends!</h1>
+          <span className="section-text">Nearly a dozen breeds to choose from, each with their own unique colors and patterns.</span>
+          
+          <ImageSlider slides = {SliderData}/>
+          
           <Container>
-            <span className="section-text">To learn more about each chameleon's quirks and personalities, click below.</span>
+{/*            <span className="section-text">To learn more about each chameleon's quirks and personalities, click below.</span>
+            
             <div className="img-section">
-              <figure className = "img-wrapper"><a href="./views/products">
+              <figure className = "img-wrapper"><Link to="/products">
                 <img src={Cham1} alt="" className = "chamPic" />
                 <figcaption className = "img-caption">Parson's Chameleons</figcaption>
-              </a></figure>
-              <span className = "img-wrapper"><a href="./views/products">
+              </Link></figure>
+
+              <span className = "img-wrapper"><Link to="/products">
                 <img src={Cham2} alt="" className = "chamPic" />
                 <figcaption className = "img-caption">Veiled Chameleons</figcaption>
-              </a></span>
-              <span className = "img-wrapper"><a href="./views/products">
+              </Link></span>
+              
+              <span className = "img-wrapper"><Link to="/products">
                 <img src={Cham3} alt="" className = "chamPic" />
                 <figcaption className = "img-caption">Carpet Chameleons</figcaption>
-              </a></span>
-            </div>
-            <div className="img-section">
-              <span className = "img-wrapper"><a href="./views/products">
-                <img src={Cham4} alt="" className = "chamPic" />
-                <figcaption className = "img-caption">Horned Chameleons</figcaption>
-              </a></span>
-              <span className = "img-wrapper"><a href="./views/products">
-                <img src={Cham5} alt="" className = "chamPic" />
-                <figcaption className = "img-caption">Panther Chameleons</figcaption>
-              </a></span>
-            </div>
-          </Container>
-<span>{/*
-          <div className="slideshow-container">
-            <div className="mySlides ">
-              <a href="./views/products">
-                <img src={Cham1} alt="" className = "chamPic" />
-              </a>
+              </Link></span>
             </div>
 
-            <div className = "mySlides ">
-              <a href="./views/products">
-                <img src={Cham2} alt="" className = "chamPic" />
-              </a>
-            </div>
-            
-            <div  className = "mySlides ">
-              <a href="./views/products">
-                <img src={Cham3} alt="" className = "chamPic" />
-              </a>
-            </div>
-          </div>
-    */}</span>
+            <div className="img-section">
+              <span className = "img-wrapper"><Link to="/products">
+                <img src={Cham4} alt="" className = "chamPic" />
+                <figcaption className = "img-caption">Horned Chameleons</figcaption>
+              </Link></span>
+
+              <span className = "img-wrapper"><Link to="/products">
+                <img src={Cham5} alt="" className = "chamPic" />
+                <figcaption className = "img-caption">Panther Chameleons</figcaption>
+              </Link></span>
+              
+    </div> */}
+          </Container>
         </section>
 
         <section id="info" className = "webSection">
@@ -113,10 +102,6 @@ class Main extends React.Component{
               We also offer plenty of toys, tools, and mini-houses for your pet to play in.
             </div>
           </div>
-          
-          <button className = "btn btn-success btn-lg" id = "products-button">
-            Learn more about <a href="./views/about" id = "productsLink" title = "Link to raising-chams page">how we raise our chameleons</a>
-          </button>
 
         </section>
 
@@ -125,7 +110,6 @@ class Main extends React.Component{
     )
   }
 }
-ReactDOM.render(<Main/>, document.getElementById('root'))
 
 export default Main
 

@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #f8f8f8;
+  background-color: #f3f5f8;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
 
 .nav-link{
   margin:auto;
-  font-size: 18px;
+  font-size: 18px !important;
   font-family:Roboto;
 }
 
@@ -58,6 +58,7 @@
 #shopping-cart{
   margin-left: 2vh;
   scale: 150%;
+  margin-top: 1.5vh;
 }
 
 .bi-cart{
@@ -129,8 +130,8 @@
   width: 15rem;
   height:15rem;  
   opacity: .9;
-  border: 1.2rem solid#11c882;
-  border-radius: 4rem;
+  border: 1.2rem solid#00904fdf;
+  border-radius: 1.3rem;
   box-shadow: .2rem .2rem .2rem black;
 }
 
@@ -153,7 +154,7 @@
 }
 
 #info{
-  background-color: #00904fdf;
+  background-color: #00904f5e;
   position:relative;
 }
 
@@ -174,14 +175,14 @@
 
 #productsLink{
   text-decoration: none;
-  color:#11c882;
+  color:#e18f02;
 }
 
 #products-button{
   margin-left: 5vh;
   line-height: 2;
-  background-color:#f6f6f6;
-  color:#11c882;
+  background-color:#052427a4;
+  color:#e18f02;
 }
 
 #products-button:hover{
@@ -190,4 +191,55 @@
 
 #hero-button:hover{
   transform: scale(1.02)
+}
+
+.subpage{
+  margin-top: 3.5rem;
+}
+
+.slider{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;;
+}
+
+.right-arrow{
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size:3rem;
+  color:#000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow{
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size:3rem;
+  color:#000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0.7;
+  transition-duration: 1s ease;
+}
+
+.slide.active{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.06)
 }

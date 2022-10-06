@@ -12,20 +12,8 @@ class Footer extends React.Component {
     <footer class="footer py-2 mt-auto">
         <span class="text-light" id = "nav-heading">Carter's Chameleons 2022</span>
         <div class="container container-fluid d-flex flex-row" id = "footerContainer">
-
-            <a class="footer-link text-muted" aria-current="page" href="./views/home">
-                Home
-            </a>
-          
-            <a class="footer-link text-muted" href="./views/products">
-                Products
-            </a>
             
-            <a class="footer-link text-muted" href="./views/about">
-                About us
-            </a>
-            
-            <a href="./views/contact" class="footer-link text-muted">
+            <a href="mailto:jason.antal89@gmail.com" class="footer-link text-muted">
                 Contact us
             </a>
 
