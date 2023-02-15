@@ -30,18 +30,3 @@ function App () {
 
 
 export default App;
-/*function App() {
-    return (
-    <BrowserRouter>
-      <Navbar>
-        <Routes>
-          <Route path= "/" element={<Main/>}/>
-          <Route path = "about" element = {<About/>}/>
-          <Route path= "products" element = {<Products/>} />
-          <Route path= "login" element={<Login/>}/>
-        </Routes>
-      </Navbar>
-    </BrowserRouter>
-    );
-  }
-  export default App;*/
